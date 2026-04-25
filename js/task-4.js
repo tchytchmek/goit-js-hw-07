@@ -10,9 +10,8 @@ function handleSubmit(event){
     if(elements.email.value == false || elements.password.value == false){
         alert('All form fields must be filled in');
     }else{
-           user.email = elements.email.value;
-           user.password = elements.password.value;
-       
+           user.email = elements.email.value.trim();
+           user.password = elements.password.value.trim();
+           event.target.reset();
     }
-    event.target.reset();
 }
